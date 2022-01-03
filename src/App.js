@@ -3,6 +3,7 @@ import { Route, Switch } from 'react-router-dom';
 import './App.css';
 import Aboutus from './Pages/Aboutus/Aboutus';
 import AuthProvider from './Pages/Context/AuthProvider/AuthProvider';
+import Database from './Pages/database/database/Database';
 import HomeMain from './Pages/HomeMain/HomeMain';
 import Login from './Pages/Login/Login';
 import Navigation from './Pages/Navigation/Navigation';
@@ -23,6 +24,9 @@ function App() {
           </Route>
           <Route path="/aboutus">
             <Aboutus></Aboutus>
+          </Route>
+          <Route path="/Database">
+            <Database></Database>
           </Route>
           <Route path="/login">
             <Login></Login>
