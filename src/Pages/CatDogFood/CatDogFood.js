@@ -5,7 +5,7 @@ import './CatDogFood.css';
 const CatDogFood = () => {
     const [food,setFood]=useState([]);
     useEffect(()=>{
-        fetch('./Petsfood.json')
+        fetch('http://localhost:5000/serviecs')
         .then(res=>res.json())
         .then(data=>setFood(data))
     },[])
