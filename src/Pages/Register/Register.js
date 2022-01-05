@@ -3,27 +3,35 @@ import { Col } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import UseAuth from '../Hooks/UseAuth';
 import './Register.css';
+import { useDispatch, useSelector } from "react-redux";
+import { userRegister } from "../../Redux/Actions/userActions";
 
 const Register = () => {
-    const [logindata, setloginData] = useState({});
+    const [loginData, setLoginData] = useState({});
   const {registerUser} = UseAuth();
   const handelOnBlur = e =>{
     const inputValue = e.target.name;
     const Value = e.target.value;
-    const newData = {...logindata};
+    const newData = {...loginData};
     newData[inputValue] = Value;
-    setloginData(newData)
+    setLoginData(newData)
     console.log(newData);
   }
   const handelBtn = e =>{
-    if(logindata.password !== logindata.password2){
-      alert('did not password')
+    if(loginData.password !== loginData.password2){
+      alert('did not match two password')
       e.terget.value = "";
     }
-    registerUser(logindata.email, logindata.password)
+    registerUser(loginData.email, loginData.password)
     e.terget.value = "";
     e.preventDefault()
   }
+   const dispatch = useDispatch();
+   const { loading } = useSelector((state) => state.alertReducer);
+   function onFinish(newData) {
+     dispatch(userRegister(newData));
+     console.log(newData);
+   }
     return (
         <div>
             
@@ -38,7 +46,7 @@ const Register = () => {
                             type="name"
                             name='name'
                             placeholder='Full Name'
-                            onChange={handelOnBlur}
+                            onBlur={handelOnBlur}
                             id="frist"/>
                             <br /><br />
                             <label htmlFor="mail"></label>

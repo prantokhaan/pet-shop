@@ -14,7 +14,7 @@ const Navigation = () => {
           <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className="me-auto">
               <Nav.Link as={Link} to="/home" className='text-dark'>Home</Nav.Link>
-              <Nav.Link as={Link} to="/Services" className='text-dark'>Services</Nav.Link>
+              <Nav.Link as={Link} to="/foods" className='text-dark'>Pet Foods</Nav.Link>
               <Nav.Link as={Link} to="/MyOders" className='text-dark'>My Oders</Nav.Link>
             </Nav>
             <Nav>
@@ -24,9 +24,7 @@ const Navigation = () => {
                 <Nav.Link as={Link} to="/login" className='text-dark'>Login</Nav.Link>
               }
               <Nav.Link as={Link} to="/register" className='text-dark'>Register</Nav.Link>
-              <Nav.Link eventKey={2} href="#memes" className='text-dark'>
-                Dank memes
-              </Nav.Link>
+              
             </Nav>
           </Navbar.Collapse>
           </Container>

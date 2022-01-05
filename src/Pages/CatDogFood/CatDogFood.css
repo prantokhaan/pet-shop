@@ -1,9 +1,13 @@
-.all-food h1{
-    margin-right: 40%;
+.food-text{
     font-weight: bold;
     font-size: 45px;
 }
-
+.all-food h1{
+    
+}
+.all-food p{
+    font-size: 15px;
+}
 .display-grid{
     display: grid;
     grid-template-columns: repeat(3,1fr);

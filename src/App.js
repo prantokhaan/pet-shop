@@ -2,6 +2,7 @@ import { BrowserRouter } from 'react-router-dom';
 import { Route, Switch } from 'react-router-dom';
 import './App.css';
 import Aboutus from './Pages/Aboutus/Aboutus';
+import CatDogFood from './Pages/CatDogFood/CatDogFood';
 import AuthProvider from './Pages/Context/AuthProvider/AuthProvider';
 import HomeMain from './Pages/HomeMain/HomeMain';
 import Login from './Pages/Login/Login';
@@ -20,6 +21,9 @@ function App() {
           </Route>
           <Route path="/home">
             <HomeMain></HomeMain>
+          </Route>
+          <Route path="/foods">
+            <CatDogFood />
           </Route>
           <Route path="/aboutus">
             <Aboutus></Aboutus>
